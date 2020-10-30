@@ -1,0 +1,113 @@
+body {
+    font-family: "Inter", sans-serif;
+  }
+
+  img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+  
+  :root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr 1.5fr;
+    grid-template-areas:
+      " main aside sidebar"
+      " content1 content2  sidebar"
+      " footer section sidebar";
+   
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+    
+  main {
+    background: #C41506;
+    grid-area: main;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+
+  aside{
+    background: white;
+    grid-area: aside;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+  
+  #sidebar {
+    background: #18ffff;
+    grid-area: sidebar;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+  
+  #content1 {
+    background: #6fffd2;
+    grid-area: content1;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+  
+  #content2 {
+    background: #C41506;
+    grid-area: content2;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+  
+  #content3 {
+    background: #73ffba;
+    grid-area: content3;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+  
+  footer {
+    background: #C41506;
+    grid-area: footer;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding); */
+  }
+
+  section {
+    background: white;
+    grid-area: section;
+    /* border-radius: var(--main-radius);
+    padding-top: var(--main-padding);} */
+  } 
+  
+  a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+  }
+  
